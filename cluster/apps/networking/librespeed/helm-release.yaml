@@ -38,6 +38,7 @@ spec:
         tls:
           - hosts:
               - "librespeed.${SECRET_DOMAIN}"
+            secretName: "librespeed-tls"
     resources:
       requests:
         memory: 50Mi
