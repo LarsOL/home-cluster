@@ -108,3 +108,27 @@ resource "cloudflare_record" "hajimari" {
   type    = "CNAME"
   ttl     = 1
 }
+
+
+resource "cloudflare_record" "googleSiteVerification" {
+  name    = "lawoko.com"
+  zone_id = lookup(data.cloudflare_zones.domain.zones[0], "id")
+  value   = "google-site-verification=yvSlYg2bIBd1xZw3eHd_tqZWRdepfd1jubedbUM4d_o"
+  type    = "TXT"
+}
+
+resource "cloudflare_record" "amp" {
+  name    = "amp"
+  zone_id = lookup(data.cloudflare_zones.domain.zones[0], "id")
+  value   = "34.87.248.239"
+  proxied = true
+  type    = "A"
+}
+
+resource "cloudflare_record" "blog" {
+  name    = "amp"
+  zone_id = lookup(data.cloudflare_zones.domain.zones[0], "id")
+  value   = "larsol.github.io"
+  proxied = true
+  type    = "CNAME"
+  }
