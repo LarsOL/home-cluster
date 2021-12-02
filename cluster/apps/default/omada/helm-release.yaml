@@ -49,11 +49,6 @@ spec:
         cpu: 50m
       limits:
         memory: 2000Mi
-    service:
-      main:
-        type: "LoadBalancer"
-        port: 8043
-        targetPort: 8043
     persistence:
       config:
         enabled: true
