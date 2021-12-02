@@ -50,7 +50,7 @@ spec:
       limits:
         memory: 2000Mi
     service:
-      http:
+      main:
         type: "LoadBalancer"
         port: 8043
     persistence:
