@@ -40,6 +40,9 @@ spec:
           - hosts:
               - "omada.${SECRET_DOMAIN}"
             secretName: "omada-tls"
+    startup:
+      spec:
+        failureThreshold: 60
     resources:
       requests:
         memory: 50Mi
