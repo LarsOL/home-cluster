@@ -48,6 +48,8 @@ spec:
         memory: 1000Mi
     service:
       main:
+        type: "LoadBalancer" 
         ports:
           http:
             port: 80
+            targetPort: 8043
