@@ -29,7 +29,7 @@ spec:
       name: "you"
       customApps:
         - name: PiHole
-          url: http://192.168.1.11
+          url: http://192.168.1.11/admin/
           icon: minus-circle-off-outline
         - name: Omada VM
           url: https://192.168.0.137:8043/login#wiredNetworksLan
