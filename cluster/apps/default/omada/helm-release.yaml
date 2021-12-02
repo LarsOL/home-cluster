@@ -40,9 +40,9 @@ spec:
           - hosts:
               - "omada.${SECRET_DOMAIN}"
             secretName: "omada-tls"
-    # startup:
-    #   spec:
-    #     failureThreshold: 60
+    startup:
+      spec:
+        failureThreshold: 60
     resources:
       requests:
         memory: 50Mi
@@ -52,6 +52,8 @@ spec:
     service:
       main:
         type: "LoadBalancer"
+        port: 8043
+        targetPort: 8043
     persistence:
       config:
         enabled: true
