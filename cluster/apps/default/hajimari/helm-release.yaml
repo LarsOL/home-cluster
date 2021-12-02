@@ -28,9 +28,15 @@ spec:
           - networking
       name: "you"
       customApps:
-        - name: Some External Cluster Service
-          url: http://192.168.1.100:5000
-          icon: test-tube
+        - name: PiHole
+          url: http://192.168.1.11
+          icon: minus-circle-off-outline
+        - name: Omada VM
+          url: https://192.168.0.137:8043/login#wiredNetworksLan
+          icon: router-network
+        - name: ProxMox
+          url: https://192.168.0.2:8006
+          icon: server
       groups:
         - name: Communicate
           links:
