@@ -48,11 +48,35 @@ spec:
         memory: 50Mi
         cpu: 50m
       limits:
-        memory: 2000Mi
+        memory: 1000Mi
+# Ports from https://community.tp-link.com/en/business/kb/detail/362
     service:
       main:
         type: "LoadBalancer"
-        port: 8043
+        http:
+          port: 8043
+          protocol: HTTPS
+        httpOther:
+          port: 8048
+          protocol: HTTP
+        discovery1:
+          port: 29810
+          protocol: UDP
+        discovery2:
+          port: 29811
+          protocol: TCP
+        discovery3:
+          port: 29812
+          protocol: TCP
+        discovery4:
+          port: 29813
+          protocol: TCP
+        Initialization1:
+          port: 27001
+          protocol: UDP
+        Initialization2:
+          port: 27002
+          protocol: TCP
     persistence:
       config:
         enabled: true
