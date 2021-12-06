@@ -22,6 +22,7 @@ spec:
       tag: "4.4"
     env:
       TZ: "Australia/Melbourne"
+      SHOW_SERVER_LOGS: true
     ingress:
       main:
         enabled: true
@@ -42,18 +43,93 @@ spec:
             secretName: "omada-tls"
     startup:
       spec:
-        failureThreshold: 60
+        failureThreshold: 45
     resources:
       requests:
-        memory: 50Mi
+        memory: 900Mi
         cpu: 50m
       limits:
-        memory: 2000Mi
+        memory: 1500Mi
+# Ports from https://community.tp-link.com/en/business/kb/detail/362
     service:
       main:
-        type: "LoadBalancer"
-        port: 8043
-    persistence:
-      config:
         enabled: true
-        mountPath: /data
+        annotations:
+          traefik.ingress.kubernetes.io/service.serversscheme: https
+      controller:
+        enabled: true
+        type: LoadBalancer
+        loadBalancerIP: "${SVC_OMADA_ADDRESS}"
+        externalTrafficPolicy: Local
+        ports:
+          mgmt-8088-tcp:
+            enabled: true
+            port: 8088
+            protocol: TCP
+            targetPort: 8088
+          mgmt-8043-tcp:
+            enabled: true
+            port: 8043
+            protocol: TCP
+            targetPort: 8043
+          portal-8843-tcp:
+            enabled: true
+            port: 8843
+            protocol: TCP
+            targetPort: 8843
+          eap-29810-tcp:
+            enabled: true
+            port: 29810
+            protocol: TCP
+            targetPort: 29810
+          eap-29810-udp:
+            enabled: true
+            port: 29810
+            protocol: UDP
+            targetPort: 29810
+          eap-29811-tcp:
+            enabled: true
+            port: 29811
+            protocol: TCP
+            targetPort: 29811
+          eap-29811-udp:
+            enabled: true
+            port: 29811
+            protocol: UDP
+            targetPort: 29811
+          eap-29812-tcp:
+            enabled: true
+            port: 29812
+            protocol: TCP
+            targetPort: 29812
+          eap-29812-udp:
+            enabled: true
+            port: 29812
+            protocol: UDP
+            targetPort: 29812
+          eap-29813-tcp:
+            enabled: true
+            port: 29813
+            protocol: TCP
+            targetPort: 29813
+          eap-29813-udp:
+            enabled: true
+            port: 29813
+            protocol: UDP
+            targetPort: 29813
+    persistence:
+      omada-data:
+        enabled: true
+        mountPath: /opt/tplink/EAPController/data
+        accessMode: ReadWriteOnce
+        size: 1Gi
+      omada-work:
+        enabled: true
+        mountPath: /opt/tplink/EAPController/work
+        accessMode: ReadWriteOnce
+        size: 1Gi
+      omada-logs:
+        enabled: true
+        mountPath: /opt/tplink/EAPController/logs
+        accessMode: ReadWriteOnce
+        size: 1Gi
