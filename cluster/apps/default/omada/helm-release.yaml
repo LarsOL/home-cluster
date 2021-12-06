@@ -76,11 +76,11 @@ spec:
           port: 29813
           protocol: TCP
           primary: false
-        Initialization1:
+        Initialisation1:
           port: 27001
           protocol: UDP
           primary: false
-        Initialization2:
+        Initialisation2:
           port: 27002
           protocol: TCP
           primary: false
