@@ -51,7 +51,7 @@ spec:
         memory: 1500Mi
 # Ports from https://community.tp-link.com/en/business/kb/detail/362
     service:
-      main:
+      test:
         type: "LoadBalancer"
         ports:
           http:
