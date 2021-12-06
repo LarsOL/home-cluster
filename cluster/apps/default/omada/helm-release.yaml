@@ -57,7 +57,7 @@ spec:
           port: 8043
           protocol: HTTPS
         httpOther:
-          port: 8048
+          port: 8088
           protocol: HTTP
           primary: false
         discovery1:
