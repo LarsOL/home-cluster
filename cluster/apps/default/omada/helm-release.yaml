@@ -59,24 +59,31 @@ spec:
         httpOther:
           port: 8048
           protocol: HTTP
+          primary: false
         discovery1:
           port: 29810
           protocol: UDP
+          primary: false
         discovery2:
           port: 29811
           protocol: TCP
+          primary: false
         discovery3:
           port: 29812
           protocol: TCP
+          primary: false
         discovery4:
           port: 29813
           protocol: TCP
+          primary: false
         Initialization1:
           port: 27001
           protocol: UDP
+          primary: false
         Initialization2:
           port: 27002
           protocol: TCP
+          primary: false
     persistence:
       config:
         enabled: true
