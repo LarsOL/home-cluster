@@ -42,7 +42,7 @@ spec:
             secretName: "omada-tls"
     startup:
       spec:
-        failureThreshold: 60
+        failureThreshold: 45
     resources:
       requests:
         memory: 50Mi
