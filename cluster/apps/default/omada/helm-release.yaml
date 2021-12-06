@@ -85,6 +85,12 @@ spec:
           protocol: TCP
           primary: false
     persistence:
-      config:
+      omada-data:
         enabled: true
-        mountPath: /opt/tplink/EAPController/
+        mountPath: /opt/tplink/EAPController/data
+      omada-work:
+        enabled: true
+        mountPath: /opt/tplink/EAPController/work
+      omada-logs:
+        enabled: true
+        mountPath: /opt/tplink/EAPController/logs
