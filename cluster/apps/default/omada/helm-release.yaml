@@ -54,11 +54,11 @@ spec:
       main:
         type: "LoadBalancer"
         ports:
-          https:
+          http:
             port: 8043
             protocol: HTTPS
             primary: true
-          http:
+          httpOther:
             port: 8088
             protocol: HTTP
             primary: false
