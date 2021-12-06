@@ -51,44 +51,41 @@ spec:
         memory: 1500Mi
 # Ports from https://community.tp-link.com/en/business/kb/detail/362
     service:
-      - main:
-          type: "LoadBalancer"
-          ports:
-            http:
-              port: 8043
-              protocol: HTTPS
-              primary: true
-      - test:
-          type: "LoadBalancer"
-          ports:
-            httpOther:
-              port: 8088
-              protocol: HTTP
-              primary: false
-            discovery1:
-              port: 29810
-              protocol: UDP
-              primary: false
-            discovery2:
-              port: 29811
-              protocol: TCP
-              primary: false
-            discovery3:
-              port: 29812
-              protocol: TCP
-              primary: false
-            discovery4:
-              port: 29813
-              protocol: TCP
-              primary: false
-            Initialisation1:
-              port: 27001
-              protocol: UDP
-              primary: false
-            Initialisation2:
-              port: 27002
-              protocol: TCP
-              primary: false
+      main:
+        type: "LoadBalancer"
+        ports:
+          http:
+            port: 8043
+            protocol: HTTPS
+            primary: true
+          httpOther:
+            port: 8088
+            protocol: HTTP
+            primary: false
+          discovery1:
+            port: 29810
+            protocol: UDP
+            primary: false
+          discovery2:
+            port: 29811
+            protocol: TCP
+            primary: false
+          discovery3:
+            port: 29812
+            protocol: TCP
+            primary: false
+          discovery4:
+            port: 29813
+            protocol: TCP
+            primary: false
+          Initialisation1:
+            port: 27001
+            protocol: UDP
+            primary: false
+          Initialisation2:
+            port: 27002
+            protocol: TCP
+            primary: false
     persistence:
       omada-data:
         enabled: true
