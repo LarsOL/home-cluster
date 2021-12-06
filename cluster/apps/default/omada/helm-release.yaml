@@ -51,13 +51,15 @@ spec:
         memory: 1500Mi
 # Ports from https://community.tp-link.com/en/business/kb/detail/362
     service:
-      test:
+      main:
         type: "LoadBalancer"
         ports:
           http:
             port: 8043
             protocol: HTTPS
             primary: true
+      test:
+        ports:
           httpOther:
             port: 8088
             protocol: HTTP
