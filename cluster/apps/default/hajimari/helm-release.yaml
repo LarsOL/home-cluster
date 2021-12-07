@@ -29,10 +29,10 @@ spec:
       name: "you"
       customApps:
         - name: PiHole
-          url: http://192.168.1.11/admin/
+          url: "http://${SVC_PIHOLE_ADDRESS}/admin/"
           icon: minus-circle-off-outline
         - name: Omada VM
-          url: https://192.168.0.137:8043/login#wiredNetworksLan
+          url: "https://${SVC_OMADA_ADDRESS}:8043/login"
           icon: router-network
         - name: ProxMox
           url: https://192.168.0.2:8006
