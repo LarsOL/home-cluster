@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       # renovate: registryUrl=https://mojo2600.github.io/pihole-kubernetes/
-      chart: pihole 
+      chart: pihole
       version: 2.5.3
       sourceRef:
         kind: HelmRepository
@@ -38,7 +38,7 @@ spec:
         hajimari.io/enable: "true"
         hajimari.io/icon: "router-network"
       type: LoadBalancer
-    
+
     persistentVolumeClaim:
       enabled: true
 

@@ -133,4 +133,3 @@ spec:
         mountPath: /opt/tplink/EAPController/logs
         accessMode: ReadWriteOnce
         size: 500Mi
-
