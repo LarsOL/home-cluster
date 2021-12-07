@@ -2,10 +2,12 @@
 creation_rules:
   - path_regex: provision/.*\.sops\.ya?ml
     unencrypted_regex: "^(kind)$"
-    pgp: >-
-      01CF49B023FA95951E7B2B0A1A72E18A2ECFB83F
+    age: >-
+      age1fv2r9xcluc5vnp4l8yg5amr95ar2vaencq5mddfead9lmrjx8fpqc8994x
   - path_regex: cluster/.*\.ya?ml
     encrypted_regex: "^(data|stringData)$"
-    pgp: >-
-      BF06DD9C21E3BF4384FCC425D15E12B67F66DA26,
-      01CF49B023FA95951E7B2B0A1A72E18A2ECFB83F
+    age: >-
+      age1fv2r9xcluc5vnp4l8yg5amr95ar2vaencq5mddfead9lmrjx8fpqc8994x
+
+# find ./cluster -type f -iname "*sops*" -exec sops --decrypt --in-place {} \;
+# find ./cluster -type f -iname "*sops*" -exec sops --encrypt --in-place {} \;
