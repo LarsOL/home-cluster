@@ -39,6 +39,9 @@ spec:
         hajimari.io/icon: "router-network"
       type: LoadBalancer
     
+    persistentVolumeClaim:
+      enabled: true
+      
     resources:
       requests:
         memory: 100Mi

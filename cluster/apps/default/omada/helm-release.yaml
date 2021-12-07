@@ -122,14 +122,14 @@ spec:
         enabled: true
         mountPath: /opt/tplink/EAPController/data
         accessMode: ReadWriteOnce
-        size: 1Gi
+        size: 500Mi
       omada-work:
         enabled: true
         mountPath: /opt/tplink/EAPController/work
         accessMode: ReadWriteOnce
-        size: 1Gi
+        size: 500Mi
       omada-logs:
         enabled: true
         mountPath: /opt/tplink/EAPController/logs
         accessMode: ReadWriteOnce
-        size: 1Gi
+        size: 500Mi
