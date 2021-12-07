@@ -4,3 +4,4 @@ resources:
   - traefik
   - librespeed
   - external-dns
+  - cloudflare-ddns
