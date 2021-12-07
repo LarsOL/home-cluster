@@ -21,7 +21,7 @@ spec:
       repository: mbentley/omada-controller
       tag: "4.4"
     env:
-      TZ: "Australia/Melbourne"
+      TZ: "${TZ}"
       SHOW_SERVER_LOGS: true
     ingress:
       main:
