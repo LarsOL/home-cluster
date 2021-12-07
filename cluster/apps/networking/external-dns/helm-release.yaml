@@ -22,8 +22,6 @@ spec:
     # logLevel: debug
     sources:
       - ingress
-      - service
-      - crd
     provider: cloudflare
     cloudflare:
       apiKey: "${SECRET_CLOUDFLARE_APIKEY}"
@@ -33,10 +31,6 @@ spec:
     txtPrefix: "k8s."
     domainFilters:
       - "${SECRET_DOMAIN}"
-    crd:
-      create: false
-      apiversion: externaldns.k8s.io/v1alpha1
-      kind: DNSEndpoint
     resources:
       requests:
         memory: 100Mi
