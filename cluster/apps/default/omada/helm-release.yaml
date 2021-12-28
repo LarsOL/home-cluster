@@ -20,6 +20,8 @@ spec:
     image:
       repository: mbentley/omada-controller
       tag: "4.4"
+#     Tags are reused for patch versions
+      pullPolicy: "always"
     env:
       TZ: "${TZ}"
       SHOW_SERVER_LOGS: true
