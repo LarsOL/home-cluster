@@ -19,7 +19,7 @@
     ],
   },
   "regexManagers": [
-    // regexManager to read and process HelmRelease files
+    // regexManager to read and process HelmRelease files 
     {
       "fileMatch": [
         "cluster/.+\\.yaml$"
