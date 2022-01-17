@@ -27,7 +27,7 @@ spec:
       SHOW_SERVER_LOGS: true
     startup:
       spec:
-        failureThreshold: 45
+        failureThreshold: 40
     resources:
       requests:
         memory: 900Mi
