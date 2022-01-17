@@ -19,7 +19,7 @@ spec:
   values:
     image:
       repository: mbentley/omada-controller
-      tag: "4.4"
+      tag: "5.0"
 #     Tags are reused for patch versions
       pullPolicy: "always"
     env:
@@ -101,6 +101,11 @@ spec:
             port: 29813
             protocol: UDP
             targetPort: 29813
+          eap-29814-tcp:
+            enabled: true
+            port: 29814
+            protocol: TCP
+            targetPort: 29814
     persistence:
       omada-data:
         enabled: true
