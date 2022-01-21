@@ -21,7 +21,7 @@ spec:
       repository: mbentley/omada-controller
       tag: "5.0"
 #     Tags are reused for patch versions
-      pullPolicy: "always"
+      pullPolicy: "Always"
     env:
       TZ: "${TZ}"
       SHOW_SERVER_LOGS: true
