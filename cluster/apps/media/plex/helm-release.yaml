@@ -58,11 +58,13 @@ spec:
       media:
         enabled: true
         mountPath: /media
-        readOnly: true
+        accessMode: ReadWriteOnce
+        size: 1Gi
       backup:
         enabled: true
         mountPath: /config/Backups
-        readOnly: false
+        accessMode: ReadWriteOnce
+        size: 1Gi
       transcode:
         enabled: true
         type: emptyDir
