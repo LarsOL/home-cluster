@@ -4,3 +4,4 @@ resources:
   - hajimari
   - pihole
   - omada
+  - echo-server
