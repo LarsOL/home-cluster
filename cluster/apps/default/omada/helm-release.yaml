@@ -19,7 +19,7 @@ spec:
   values:
     image:
       repository: mbentley/omada-controller
-      tag: "5.14"
+      tag: "5.15"
 #     Tags are reused for patch versions
       pullPolicy: "Always"
     env:
